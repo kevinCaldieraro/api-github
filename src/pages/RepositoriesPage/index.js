@@ -1,5 +1,15 @@
 import React from 'react';
 
-const RepositoriesPage = () => <h1>index</h1>;
+import { Container, Sidebar, Main } from './style';
+import Profile from './Profile';
+
+const RepositoriesPage = () => (
+  <Container>
+    <Sidebar>
+      <Profile />
+    </Sidebar>
+    <Main>Main</Main>
+  </Container>
+);
 
 export default RepositoriesPage;

@@ -14,7 +14,7 @@ const MainPage = () => {
       <Title>API GitHub</Title>
       <Form>
         <Input
-          placeholder="Pesquise uma conta GitHub aqui"
+          placeholder="Insira um usuário"
           value={login}
           onChange={(e) => setLogin(e.target.value)}
         />
