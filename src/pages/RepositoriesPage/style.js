@@ -24,15 +24,15 @@ export const Sidebar = styled.aside`
 export const Main = styled.section`
   background: ${(props) => props.theme.colors.container};
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px;
   overflow-y: hidden;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
-    height: 100%;
+    flex: 1;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 `;

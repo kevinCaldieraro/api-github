@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 1rem;
+  padding: 1.2rem 1rem;
 `;
 
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: row;
@@ -36,8 +35,25 @@ export const Login = styled.h1`
 export const Name = styled.h2`
   font-size: ${(props) => props.theme.fontSizes.subtitle};
   font-weight: normal;
+  margin-bottom: 1.5rem;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: none;
+  }
+`;
+
+export const Inner = styled.div`
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    display: none;
+  }
+`;
+
+export const Data = styled.p`
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+
+  svg {
+    margin-right: 10px;
   }
 `;
