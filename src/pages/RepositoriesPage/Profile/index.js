@@ -1,35 +1,56 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { MdGroup, MdLocationCity, MdWork, MdLink } from 'react-icons/md';
 
 import { Container, Header, Avatar, Login, Name, Inner, Data } from './style';
 
-const Profile = () => (
+const Profile = ({ user }) => (
   <Container>
     <Header>
-      <Avatar src="https://avatars.githubusercontent.com/u/73244947?v=4" />
-      <Login>kevincaldieraro</Login>
-      <Name>Kevin Caldieraro</Name>
+      <Avatar src={user.avatar_url} />
+      <Login>{user.login}</Login>
+      <Name>{user.name}</Name>
     </Header>
     <Inner>
       <Data>
         <MdGroup size={20} />
-        20&nbsp;<i>seguidores</i>&nbsp;&middot;&nbsp;13&nbsp;<i>seguindo</i>
+        {user.followers}&nbsp;<i>seguidores</i>&nbsp;&middot;&nbsp;
+        {user.following}&nbsp;<i>seguindo</i>
       </Data>
-      <Data>
-        <MdLocationCity size={20} /> Empresa aqui
-      </Data>
-      <Data>
-        <MdWork size={20} /> Localização aqui
-      </Data>
-      <Data>
-        <MdLink size={20} />
-        <a href="https://google.com" target="blank">
-          Google
-        </a>
-      </Data>
+      {user.company && (
+        <Data>
+          <MdLocationCity size={20} /> {user.company}
+        </Data>
+      )}
+      {user.location && (
+        <Data>
+          <MdWork size={20} /> {user.location}
+        </Data>
+      )}
+      {user.blog && (
+        <Data>
+          <MdLink size={20} />
+          <a href={`\\${user.blog}`} target="blank">
+            {user.blog}
+          </a>
+        </Data>
+      )}
     </Inner>
   </Container>
 );
+
+Profile.propTypes = {
+  user: PropTypes.shape({
+    login: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar_url: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    following: PropTypes.number.isRequired,
+    company: PropTypes.string,
+    blog: PropTypes.string,
+    location: PropTypes.string,
+  }).isRequired,
+};
 
 export default Profile;
