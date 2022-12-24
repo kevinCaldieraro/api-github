@@ -22,36 +22,42 @@ const RepositoriesPage = () => {
 
   const repositories = [
     {
+      id: 1,
       name: 'Repo 1',
       description: 'Descrição',
       html_url: 'https://google.com',
       language: 'JavaScript',
     },
     {
+      id: 2,
       name: 'Repo 2',
       description: 'Descrição',
       html_url: 'https://google.com',
       language: 'JavaScript',
     },
     {
+      id: 3,
       name: 'Repo 3',
       description: 'Descrição',
       html_url: 'https://google.com',
       language: 'PHP',
     },
     {
+      id: 4,
       name: 'Repo 4',
       description: 'Descrição',
       html_url: 'https://google.com',
       language: 'PHP',
     },
     {
+      id: 5,
       name: 'Repo 5',
       description: 'Descrição',
       html_url: 'https://google.com',
       language: 'Ruby',
     },
     {
+      id: 6,
       name: 'Repo 6',
       description: 'Descrição',
       html_url: 'https://google.com',
