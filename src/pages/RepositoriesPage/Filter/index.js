@@ -23,7 +23,7 @@ Filter.propTypes = {
   languages: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      count: PropTypes.string.isRequired,
+      count: PropTypes.number.isRequired,
       color: PropTypes.string,
     }).isRequired
   ).isRequired,

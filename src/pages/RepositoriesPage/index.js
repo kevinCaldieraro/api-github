@@ -6,6 +6,8 @@ import Profile from './Profile';
 import Filter from './Filter';
 import Repositories from './Repositories';
 
+import { getLangsFrom } from '../../services/api';
+
 const RepositoriesPage = () => {
   const user = {
     login: 'kevinCaldieraro',
@@ -41,16 +43,23 @@ const RepositoriesPage = () => {
       name: 'Repo 4',
       description: 'Descrição',
       html_url: 'https://google.com',
+      language: 'PHP',
+    },
+    {
+      name: 'Repo 5',
+      description: 'Descrição',
+      html_url: 'https://google.com',
       language: 'Ruby',
+    },
+    {
+      name: 'Repo 6',
+      description: 'Descrição',
+      html_url: 'https://google.com',
+      language: null,
     },
   ];
 
-  const languages = [
-    { name: 'JavaScript', count: 5, color: '#f1c40f' },
-    { name: 'Shell', count: 3, color: '#95a5a6' },
-    { name: 'PHP', count: 1, color: '#3498db' },
-    { name: 'Ruby', count: 4, color: '#e74c3c' },
-  ];
+  const languages = getLangsFrom(repositories);
 
   return (
     <Container>
