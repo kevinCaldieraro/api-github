@@ -5,18 +5,22 @@ import { Container, Name, Description, Footer, Lang, Link } from './style';
 
 import { langColors } from '../../../../services/config';
 
-const Repository = ({ repo }) => (
-  <Container color={repo.language && langColors[repo.language.toLowerCase()]}>
-    <Name>{repo.name}</Name>
-    <Description>{repo.description}</Description>
-    <Footer color={repo.language && langColors[repo.language.toLowerCase()]}>
-      <Lang>{repo.language || 'Diversas linguagens'}</Lang>
-      <Link href={repo.html_url} target="blank">
-        Ver
-      </Link>
-    </Footer>
-  </Container>
-);
+const Repository = ({ repo }) => {
+  const color = repo.language && langColors[repo.language.toLowerCase()];
+
+  return (
+    <Container color={color}>
+      <Name>{repo.name}</Name>
+      <Description>{repo.description}</Description>
+      <Footer color={color}>
+        <Lang>{repo.language || 'Diversas linguagens'}</Lang>
+        <Link href={repo.html_url} target="blank">
+          Ver
+        </Link>
+      </Footer>
+    </Container>
+  );
+};
 
 Repository.propTypes = {
   repo: PropTypes.shape({
