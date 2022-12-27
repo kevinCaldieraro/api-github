@@ -25,7 +25,7 @@ const Repository = ({ repo }) => {
 Repository.propTypes = {
   repo: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     html_url: PropTypes.string.isRequired,
     language: PropTypes.string,
   }).isRequired,
