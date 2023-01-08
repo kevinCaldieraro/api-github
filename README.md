@@ -4,16 +4,18 @@ Projeto que consome a api do github. Nela é possível consultar dados dos usuá
 
 ## Summary
 
-- [Screenshots](#-screenshots)
-- [Como executar](#-como-executar)
-- [Bugs e problemas](#-bugs-e-problemas)
+- [Techs](#computer-techs)
+- [Screenshots](#camera-screenshots)
+- [Como executar](#rocket-como-executar)
+- [Bugs e problemas](#bug-bugs-e-problemas)
+- [O que aprendi fazendo o projeto](#books-o-que-aprendi-fazendo-o-projeto)
 
 ## :computer: Techs utilizadas
 
 - ReactJS
 - styled-components
 
-## :cam: Screenshots
+## :camera: Screenshots
 
 ![App Screenshot]('')
 
