@@ -4,7 +4,7 @@ Projeto que consome a api do github. Nela é possível consultar dados dos usuá
 
 ## Summary
 
-- [Techs](#computer-techs)
+- [Techs](#computer-techs-utilizadas)
 - [Screenshots](#camera-screenshots)
 - [Como executar](#rocket-como-executar)
 - [Bugs e problemas](#bug-bugs-e-problemas)
